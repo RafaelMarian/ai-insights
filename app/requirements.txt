@@ -1,0 +1,12 @@
+# Machine Learning
+numpy
+pandas
+scikit-learn
+
+# API
+flask
+flask-cors
+# Utils
+joblib
+
+
