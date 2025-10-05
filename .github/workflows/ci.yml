@@ -42,11 +42,11 @@ jobs:
         node-version: '18'
 
     - name: Install frontend dependencies
-      working-directory: frontend_temp
+      working-directory: frontend
       run: npm install
 
     - name: Build frontend
-      working-directory: frontend_temp
+      working-directory: frontend
       run: npm run build
 
     # ===== Docker Validation =====
