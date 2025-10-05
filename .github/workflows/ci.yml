@@ -2,9 +2,9 @@ name: AI Insights CI/CD
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "BlueFrontError" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "BlueFrontError" ]
 
 jobs:
   build-test:
