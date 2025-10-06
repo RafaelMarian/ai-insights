@@ -8,7 +8,7 @@ function App() {
 
   const handlePredict = async () => {
     try {
-      const response = await fetch("https://ai-insights-2jf2.onrender.com/predict", {
+      const response = await fetch("${process.env.REACT_APP_API_URL}/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ Age: parseInt(age), Income: parseInt(income) })
