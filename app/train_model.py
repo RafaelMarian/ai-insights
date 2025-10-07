@@ -49,26 +49,36 @@ df = pd.DataFrame(rows)
 # create synthetic label using a hidden rule and noise
 def compute_prob(row):
     p = 0.0
-    # elderly favors cold medicine
+
+    # Factori principali
     if row["product_type"] == "Cold Medicine":
-        p += 0.25 * row["elderly_ratio"]
-    # climate cold increases chances for cold medicine
+        p += 0.3 * row["elderly_ratio"]  # bătrânii influențează cumpărarea
     if row["climate"] == "Cold":
-        p += 0.20
-    # season winter increases
+        p += 0.25
     if row["season"] == "Winter":
-        p += 0.15
-    # higher income slightly increases purchase
+        p += 0.25
+
+    # Factori economici
     income_score = (row["average_income"] - 1000) / 6000
-    p += 0.15 * max(0, min(1, income_score))
-    # price penalty for too high price
-    if row["average_price"] > 80:
-        p -= 0.20
-    # urbanization effect
+    p += 0.2 * max(0, min(1, income_score))
+
+    # Preț: penalizare doar la prețuri foarte mari
+    if row["average_price"] > 100:
+        p -= 0.2
+    elif row["average_price"] < 30:
+        p += 0.05  # mic bonus pentru prețuri atractive
+
+    # Urbanizare
     if row["urbanization"] == "Urban":
+        p += 0.1
+    elif row["urbanization"] == "Semi-urban":
         p += 0.05
-    # normalize to [0,1]
-    p = max(0, min(1, p + random.uniform(-0.05, 0.05)))
+
+    # Mică variație aleatorie
+    p += random.uniform(-0.05, 0.05)
+
+    # Clipăm între 0 și 1
+    p = max(0, min(1, p))
     return p
 
 df["prob"] = df.apply(compute_prob, axis=1)

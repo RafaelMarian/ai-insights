@@ -17,7 +17,7 @@ function App() {
 
   useEffect(() => {
     // load regions
-    fetch(`${API}/regions`)
+    fetch(`${API}/api/regions`)
       .then((r) => r.json())
       .then((data) => setRegions(data))
       .catch((err) => console.error("Could not load regions:", err));
@@ -27,7 +27,7 @@ function App() {
     setLoading(true);
     setResult(null);
     try {
-      const resp = await fetch(`${API}/predict`, {
+      const resp = await fetch(`${API}/api/predict`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
