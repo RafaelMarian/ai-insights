@@ -1,0 +1,47 @@
+[
+  {
+    "region": "Criseni",
+    "average_income": 2300,
+    "average_age": 42,
+    "population_density": 85,
+    "climate": "Cold",
+    "elderly_ratio": 0.20,
+    "urbanization": "Rural"
+  },
+  {
+    "region": "Cluj-Napoca",
+    "average_income": 5200,
+    "average_age": 35,
+    "population_density": 1200,
+    "climate": "Moderate",
+    "elderly_ratio": 0.12,
+    "urbanization": "Urban"
+  },
+  {
+    "region": "Bucuresti",
+    "average_income": 6000,
+    "average_age": 38,
+    "population_density": 5500,
+    "climate": "Moderate",
+    "elderly_ratio": 0.11,
+    "urbanization": "Urban"
+  },
+  {
+    "region": "Brasov",
+    "average_income": 4200,
+    "average_age": 40,
+    "population_density": 300,
+    "climate": "Cold",
+    "elderly_ratio": 0.16,
+    "urbanization": "Semi-urban"
+  },
+  {
+    "region": "Constanta",
+    "average_income": 3500,
+    "average_age": 39,
+    "population_density": 400,
+    "climate": "Warm",
+    "elderly_ratio": 0.14,
+    "urbanization": "Urban"
+  }
+]
