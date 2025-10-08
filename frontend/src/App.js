@@ -128,7 +128,7 @@ function App() {
       <header className="topbar">
         <div className="brand">
           <h1>AI Pharma Market Predictor</h1>
-          <p className="muted">Estimate product success by region — demo</p>
+          <p className="muted"></p>
         </div>
       </header>
 
