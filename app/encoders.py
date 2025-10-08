@@ -15,7 +15,8 @@ TARGET_AGE_MAP = {
 CLIMATE_MAP = {
     "Cold": 0,
     "Moderate": 1,
-    "Warm": 2
+    "Warm": 2,
+    "Temperate": 2
 }
 
 SEASON_MAP = {
