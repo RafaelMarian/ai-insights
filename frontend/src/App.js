@@ -16,12 +16,12 @@ function Spinner() {
   return <div className="spinner" aria-hidden="true"></div>;
 }
 
-function formatPercentStr(s) {
+//function formatPercentStr(s) {
   // keep original formatting if already a percent string
-  if (!s) return "";
-  if (typeof s === "string" && s.includes("%")) return s;
-  return `${(s * 100).toFixed(1)}%`;
-}
+ // if (!s) return "";
+ // if (typeof s === "string" && s.includes("%")) return s;
+ // return `${(s * 100).toFixed(1)}%`;
+//}
 
 function App() {
   const [regions, setRegions] = useState([]);
