@@ -1,19 +1,10 @@
 [
   {
-    "region": "Bucharest",
-    "average_income": 4500,
-    "average_age": 38,
-    "population_density": 8000,
-    "elderly_ratio": 0.15,
-    "climate": "Temperate",
-    "urbanization": "Urban"
-  },
-  {
     "region": "Cluj",
-    "average_income": 3800,
-    "average_age": 36,
-    "population_density": 4500,
-    "elderly_ratio": 0.13,
+    "average_income": 4000,
+    "average_age": 45.6,
+    "population_density": 512562,
+    "elderly_ratio": 0.1545,
     "climate": "Temperate",
     "urbanization": "Urban"
   }
